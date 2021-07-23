@@ -380,7 +380,11 @@
 ![Live exercise](slides/Slide24.PNG)
 
 - **Code:**
-  > `git clone https://github.com/ahmedElghandour1/sass-vs-less.git` > `git checkout workshop_CSS` > `npm install` > `npm run watch`
+  > `git clone https://github.com/ahmedElghandour1/sass-vs-less.git` 
+  > `git checkout workshop_CSS` 
+  > `npm install` 
+  > `npm run watch`
+
 - **UI:**
   > [Adobe XD protototype and dev specs](https://xd.adobe.com/view/dea5a0e1-ca8b-4f94-9420-1c681051a62f-8bf6/)
 
