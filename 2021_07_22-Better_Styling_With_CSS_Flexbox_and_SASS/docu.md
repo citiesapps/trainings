@@ -5,7 +5,6 @@
 ![The Problem](slides/Slide3.PNG)
 
 - **CSS has been around for almost 30 years (since 1994)**
-
   - Most people learned how to style properly many years ago / without learning the best practices
   - Since then, a lot of new features have been added
   - Many "CSS fixes" are now outdated and should be avoided
@@ -13,11 +12,9 @@
 - **Many developers "hate" CSS**
 
   - _Why?_
-
     - The learning process and documentation (like questions on stackoverflow) are inconsistent, confusing and counterintuitive
 
   - _Result: "Cycle of Bad Code"_
-
     - "Spaghetti code" using many bad practices
     - This code is hard to understand, maintain and collaborate on
     - Result: instead of refactoring existing code, it will be overwritten with even more bad practices
@@ -26,7 +23,6 @@
 ![Quote Harry Roberts](slides/Slide4.PNG)
 
 - **Harry Roberts**
-
   - He illustrates in his quote that most CSS issues are caused by a **lack of confidence**
   - CSS's globally and leaky nature makes us fear the concequences
   - Knowing more about **_CSS specificity_**, best practices and generally how CSS works, will give us the freedom we need for creating **organised**, **scalable** and **easy to debug** styling systems
@@ -35,7 +31,6 @@
 ![Benefits good styling practices](slides/Slide5.PNG)
 
 - **Good styling practices will make CSS:**
-
   - Predictable
   - Less abstract
   - Organised
@@ -81,24 +76,20 @@
 ![General tips](slides/Slide9.PNG)
 
 - **Try, refactor, continue**
-
 	- When you are writing styling rules, you will most likely have to try out multiple rules until it does what you want
 	- Like this, stylesheets can get extremely long
 	- After you made something work, try to remove each line of code that is not necessary
 
 - **Keep your CSS readable**
-
 	- Make sure your CSS is readable for others and yourself.
 	- It helps to create less complicated (low level) selectors using descriptive classnames.
 	- If you do create a complicated selector, add a comment explaining what you select so you and others will understand it.
 
 - **Keep your CSS organized**
-
 	- Write title comments for each section:
 		- Global / typography / layout / components
 
 - **Reuse**
-
   - Not all css code is very understandable by itself
   - For example, to create a dropdown you will have to put the parent in position relative, the child position absolute with a top of 100%, etc.
   - This code by itself is very abstract and can't be read without understanding the underlying priniciples
@@ -167,11 +158,9 @@
 ![What is BEM](slides/Slide12.PNG)
 
 - **BEM is a methodology and naming convention**
-
   - BEM (Block, Element, Modifier) is a component-based approach to web development. The idea behind it is to divide the user interface into independent blocks. This makes interface development easy and fast even with a complex UI, and it allows reuse of existing code without copying and pasting.
 
 - **Benefits**
-
   - Consistency in classnames
   - Avoiding overwrites and confusion
   - Creation of a modular and expandable html / css system
@@ -183,17 +172,14 @@
 - **It defines 3 different concepts:**
 
 	- _Block_
-
 		- a top-level abstraction of a new component
 		- in the UI example, the `card`, `listitem`, as well as the `button` are examples of blocks. Their styling is independent of where it will be found in the page.
 
 	- _Element_
-
 		- a child of a block – its styles are dependant on their parent
     	- in the UI example, the `card__title`, `card__list` as well as the `listitem__title`, `listitem__subtitle` and `listitem__avatar` are examples of elements. Their styling is dependant on their parent, the block.
 
 	- _Modifier_
-
 	    - a variation / state of an element or block
     	- in the UI example, `listitem--active` and `button--text_only`, are examples of modifiers. They are variations of a box or element.
 
@@ -202,11 +188,9 @@
 ![What is CSS Flexbox](slides/Slide15.PNG)
 
 - **CSS Flexbox is the most useful box model for modern interface design**
-
   - It lets containers decide the width, height and order of its children, to fill the available space as good as possible
 
 - **Benefits**
-
 	- _Intuitive layout creation_
 
 		- Allows you to create modern layouts in an intuitive way
@@ -318,7 +302,7 @@
 
     		- The combinations I use most are `flex: 1 0 auto` (can take up all leftover space, but should never shrink more then their default size based on its content.), `flex: 0 0 auto` (fixed size, auto calculated), `flex: 0 0 50px` (fixed size, defining the width using the `flex-basis` property) or `flex: 1` (all children same size (see next point)).
 
-    		- `flex` can also take a single positive integer value, which is interpreted as a fraction unit (in other words: it can define the percentage of the container without explicitly calculating percentages). This is very useful for one dimensional grid-based layouts (for example, in a 12-column based grid, column1 can have `flex: 2`, `column2` can have `flex: 6` and `column3` can have `flex: 4`), which creates 3 column of `16.67%`, `50%` and `33.33%` respectively, without having to worry about any margins.
+    		- `flex` can also take a single positive integer value, which is interpreted as a fraction unit (in other words: it can define the percentage of the container without explicitly calculating percentages). This is very useful for one dimensional grid-based layouts (for example, in a 12-column based grid, `column1` can have `flex: 2`, `column2` can have `flex: 6` and `column3` can have `flex: 4`), which creates 3 column of `16.67%`, `50%` and `33.33%` respectively, without having to worry about any margins.
 
 ## 8) Basics of SASS
 
