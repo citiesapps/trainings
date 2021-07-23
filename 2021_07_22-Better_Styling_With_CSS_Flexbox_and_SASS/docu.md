@@ -77,9 +77,8 @@
   - Like this, stylesheets can get extremely long
   - After you made something work, try to remove each line of code that is not necessary
 - **Keep your CSS readable**
-  - Make sure your CSS is readable for others and yourself.
-  - It helps to create less complicated (low level) selectors using descriptive classnames.
-  - If you do create a complicated selector, add a comment explaining what you select so you and others will understand it.
+  - ADD TEXT HERE
+  - Complicated selectors: add a comment
 - **Keep your CSS organized**
   - Write title comments for each section:
     - Global / typography / layout / components
@@ -195,28 +194,68 @@
 ![Child properties](slides/Slide18.PNG)
 
 - **Flexbox properties**
+
   - We will now go over the flexbox properties that I personally use most.
-  - _Parent_ - The parent is the container whose children you want to align. > <img src="flexbox/01-container.svg" alt="CSS flex parent" width="300"/> - **The most important properties are:** - `display` - The `display` property can be set to `flex` or `inline-flex`. This decides if the parent container should behave as a `block` element or an `inline-block` element in its environment.
-            - `flex-flow`
-                - The `flex-flow` property is a shorthand for `flex-direction` and `flex-flow`.
-                > <img src="flexbox/flex-direction.svg" alt="flex-direction" width="300"/>
-                > <img src="flexbox/flex-wrap.svg" alt="flex-wrap" width="300"/>
-                - The `flex-direction` decides the direction of the main axis in which the children will be placed (default: `row`). The most commonly used values are `row` and `column`.
-                - The `flex-wrap` decides if elements can take up multiple rows or columns. `nowrap` is generally used for general layout functionality, while `wrap` is generally used for lists.
-                - The combination I use most is `flex-flow: row nowrap` which is also the default value.
+  - _Parent_
 
-            - `align-items`
-                - The `align-items` property defines how the children should be aligned on the main axis (for `flex-direction: row` that means vertical alignment, for `flex-direction: column` that means horizontal alignment).
-                > <img src="flexbox/align-items.svg" alt="align-items" width="300"/>
-                - The values I use most are `center`, `flex-start` (default) and `stretch`(used for creating boxes of equal size with various content).
+    - The parent is the container whose children you want to align.
 
-            - `justify-content`
-                - The `justify-content` property defines what should be done with the space left after all elements have reached their maximum size (defined by the `flex` property of the children), or in other words, how the children should be positioned inside of their parent container.
-                > <img src="flexbox/justify-content.svg" alt="justify-content" width="300"/>
-                - The values I use most are `center`, `flex-start` (default) and `space-between`.
+        <img src="flexbox/01-container.svg" alt="CSS flex parent" width="300"/>
 
-  - _Child_ - The child items refer to all direct children of the flex container. > <img src="flexbox/02-items.svg" alt="CSS flex child" width="300"/> - the `.parent > \**` selector can be used to select all flex children of a flex parent. - **_important:_** the flex parent can only position first-level (direct) children - It often happens that there are multiple wrappers, then it is important to realise that only the deepest level wrapper should have `display: flex` . - **The most important properties are:** - `order` - The `order` property defines the displayed order of all children. It takes a negative or positive integer. > <img src="flexbox/order.svg" alt="order" width="300"/>   
-     - `flex` - The `flex` property is a shorthand for `flex-grow`, `flex-shrink` and `flex-basis`. - The `flex-basis` property decides the default size of the element. There are many possible values and units, such as `auto` (default size based on its content) , `200px`, `20%`, etc. `flex-basis` can be a good replacement for the `width` or even the `min-width` and `max-width` property. - The `flex-grow` and `flex-shrink` properties take a boolean value that decide if an element can or cannot become respectively larger or smaller then its `flex-basis` value. > `flex-grow` > <img src="flexbox/flex-grow.svg" alt="flex-grow" width="300"/> - The combinations I use most are `flex: 1 0 auto` (can take up all leftover space, but should never shrink more then their default size based on its content.), `flex: 0 0 auto` (fixed size, auto calculated), `flex: 0 0 50px` (fixed size, defining the width using the `flex-basis` property) or `flex: 1` (all children same size (see next point)). - `flex` can also take a single positive integer value, which is interpreted as a fraction unit (in other words: it can define the percentage of the container without explicitly calculating percentages). This is very useful for one dimensional grid-based layouts (for example, in a 12-column based grid, column1 can have `flex: 2`, `column2` can have `flex: 6` and `column3` can have `flex: 4`), which creates 3 column of `16.67%`, `50%` and `33.33%` respectively, without having to worry about any margins.
+      - **The most important properties are:**
+
+        - `display`
+
+          - The `display` property can be set to `flex` or `inline-flex`. This decides if the parent container should behave as a `block` element or an `inline-block` element in its environment.
+
+        - `flex-flow`
+
+          - The `flex-flow` property is a shorthand for `flex-direction` and `flex-flow`.
+
+            <img src="flexbox/flex-direction.svg" alt="flex-direction" width="300"/>
+            <img src="flexbox/flex-wrap.svg" alt="flex-wrap" width="300"/>
+
+          - The `flex-direction` decides the direction of the main axis in which the children will be placed (default: `row`). The most commonly used values are `row` and `column`.
+          - The `flex-wrap` decides if elements can take up multiple rows or columns. `nowrap` is generally used for general layout functionality, while `wrap` is generally used for lists.
+          - The combination I use most is `flex-flow: row nowrap` which is also the default value.
+
+        - `align-items`
+
+          - The `align-items` property defines how the children should be aligned on the main axis (for `flex-direction: row` that means vertical alignment, for `flex-direction: column` that means horizontal alignment).
+
+            <img src="flexbox/align-items.svg" alt="align-items" width="300"/>
+
+          - The values I use most are `center`, `flex-start` (default) and `stretch`(used for creating boxes of equal size with various content).
+
+        - `justify-content`
+
+          - The `justify-content` property defines what should be done with the space left after all elements have reached their maximum size (defined by the `flex` property of the children), or in other words, how the children should be positioned inside of their parent container.
+
+            <img src="flexbox/justify-content.svg" alt="justify-content" width="300"/>
+
+          - The values I use most are `center`, `flex-start` (default) and `space-between`.
+
+  - _Child_
+
+    - The child items refer to all direct children of the flex container.
+
+        <img src="flexbox/02-items.svg" alt="CSS flex child" width="300"/>
+
+    - the `.parent > \**` selector can be used to select all flex children of a flex parent.
+    - **_important:_** the flex parent can only position first-level (direct) children
+      - It often happens that there are multiple wrappers, then it is important to realise that only the deepest level wrapper should have `display: flex` .
+    - **The most important properties are:**
+
+      - `order` - The `order` property defines the displayed order of all children. It takes a negative or positive integer.
+
+      <img src="flexbox/order.svg" alt="order" width="300"/>
+
+      - `flex` - The `flex` property is a shorthand for `flex-grow`, `flex-shrink` and `flex-basis`. - The `flex-basis` property decides the default size of the element. There are many possible values and units, such as `auto` (default size based on its content) , `200px`, `20%`, etc. `flex-basis` can be a good replacement for the `width` or even the `min-width` and `max-width` property. - The `flex-grow` and `flex-shrink` properties take a boolean value that decide if an element can or cannot become respectively larger or smaller then its `flex-basis` value.
+
+    > `flex-grow` > <img src="flexbox/flex-grow.svg" alt="flex-grow" width="300"/>
+
+    - The combinations I use most are `flex: 1 0 auto` (can take up all leftover space, but should never shrink more then their default size based on its content.), `flex: 0 0 auto` (fixed size, auto calculated), `flex: 0 0 50px` (fixed size, defining the width using the `flex-basis` property) or `flex: 1` (all children same size (see next point)).
+    - `flex` can also take a single positive integer value, which is interpreted as a fraction unit (in other words: it can define the percentage of the container without explicitly calculating percentages). This is very useful for one dimensional grid-based layouts (for example, in a 12-column based grid, column1 can have `flex: 2`, `column2` can have `flex: 6` and `column3` can have `flex: 4`), which creates 3 column of `16.67%`, `50%` and `33.33%` respectively, without having to worry about any margins.
 
 ## 8) Basics of SASS
 
@@ -258,8 +297,7 @@
       - We can use arguments to make our mixins scalable and reusable for multiple situations.
       - Not only do mixins avoid writing the same code twice, but it makes code more readable (reading the mixin name allows us to understand what it does right away).
 
-![Other CSS preprocessors](slides/Slide23.PNG)  
-
+![Other CSS preprocessors](slides/Slide23.PNG)
 
 - **Other CSS preprocessors**
   - PostCSS
@@ -271,9 +309,10 @@
 
 ![Live exercise](slides/Slide24.PNG)
 
-> - **Code:** > `git clone https://github.com/ahmedElghandour1/sass-vs-less.git` > `git checkout workshop_CSS` > `npm install` > `npm run watch`
-> - **UI:**
->   [Adobe XD protototype and dev specs](https://xd.adobe.com/view/dea5a0e1-ca8b-4f94-9420-1c681051a62f-8bf6/)
+- **Code:**
+  > `git clone https://github.com/ahmedElghandour1/sass-vs-less.git` > `git checkout workshop_CSS` > `npm install` > `npm run watch`
+- **UI:**
+  > [Adobe XD protototype and dev specs](https://xd.adobe.com/view/dea5a0e1-ca8b-4f94-9420-1c681051a62f-8bf6/)
 
 ## 10) Resources
 
