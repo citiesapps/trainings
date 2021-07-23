@@ -312,8 +312,9 @@
 
 			- The `flex-grow` and `flex-shrink` properties take a boolean value that decide if an element can or cannot become respectively larger or smaller then its `flex-basis` value.
 
-			> <img src="flexbox/flex-grow.svg" alt="flex-grow" width="300"/>
     		> `flex-grow`
+			>
+			> <img src="flexbox/flex-grow.svg" alt="flex-grow" width="300"/>
 
     		- The combinations I use most are `flex: 1 0 auto` (can take up all leftover space, but should never shrink more then their default size based on its content.), `flex: 0 0 auto` (fixed size, auto calculated), `flex: 0 0 50px` (fixed size, defining the width using the `flex-basis` property) or `flex: 1` (all children same size (see next point)).
 
@@ -381,8 +382,11 @@
 
 - **Code:**
   > `git clone https://github.com/ahmedElghandour1/sass-vs-less.git` 
+  >
   > `git checkout workshop_CSS` 
+  >
   > `npm install` 
+  >
   > `npm run watch`
 
 - **UI:**
